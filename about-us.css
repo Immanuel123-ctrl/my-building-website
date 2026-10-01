@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f7;
+    color: #222;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 6%;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #071a52;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #5d20d1;
+}
+
+.signup-button {
+    text-decoration: none;
+    background: #071a52;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.signup-button:hover {
+    background: #5d20d1;
+}
+
+
+/* ABOUT HERO */
+
+.about-hero {
+    min-height: 600px;
+
+    background-image: url("brothers.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.62);
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+    padding: 30px;
+
+    color: white;
+}
+
+.small-title {
+    color: #d6a63b;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.about-content h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* GENERAL SECTIONS */
+
+.about-section,
+.family-section,
+.contact-section {
+    padding: 80px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title p {
+    color: #6b25d9;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    color: #071a52;
+    font-size: 38px;
+}
+
+
+/* ABOUT CARD */
+
+.about-card {
+    max-width: 950px;
+    margin: auto;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.about-card h3 {
+    color: #071a52;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.about-card p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #555;
+}
+
+
+/* FAMILY */
+
+.family-section {
+    background: #eef0f8;
+}
+
+.family-content {
+    max-width: 900px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.family-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.brothers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.brother {
+    background: white;
+
+    color: #071a52;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.brother:hover {
+    transform: translateY(-5px);
+    background: #071a52;
+    color: white;
+}
+
+
+/* VISION */
+
+.vision-section {
+    padding: 90px 7%;
+
+    background: linear-gradient(
+        135deg,
+        #071a52,
+        #31106f
+    );
+}
+
+.vision-card {
+    max-width: 900px;
+    margin: auto;
+
+    text-align: center;
+    color: white;
+}
+
+.vision-card .small-title {
+    color: #d6a63b;
+}
+
+.vision-card h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.vision-card p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* CONTACT */
+
+.contact-card {
+    max-width: 650px;
+    margin: auto;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card p {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.phone {
+    display: inline-block;
+
+    background: #071a52;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.phone:hover {
+    background: #5d20d1;
+    transform: translateY(-3px);
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #071a52;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 20px 30px;
+}
+
+footer h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #d7d7d7;
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #d6a63b;
+}
+
+.animated-brand {
+    font-size: 30px;
+    font-weight: bold;
+
+    color: #d6a63b;
+
+    animation: brandAnimation 3s ease-in-out infinite;
+
+    margin-bottom: 30px;
+}
+
+@keyframes brandAnimation {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-content h1 {
+        font-size: 40px;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .about-card {
+        padding: 30px 20px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .about-hero {
+        min-height: 500px;
+    }
+
+    .about-content h1 {
+        font-size: 32px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .about-section,
+    .family-section,
+    .contact-section {
+        padding: 60px 5%;
+    }
+
+    .vision-card h2 {
+        font-size: 30px;
+    }
+
+}

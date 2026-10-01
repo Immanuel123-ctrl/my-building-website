@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #222;
+
+    background: #f5f6f9;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.logo a {
+    color: #062b63;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+nav a {
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover,
+nav a.active {
+    color: #062b63;
+}
+
+
+.signup-button {
+    background: #062b63;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px 22px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+
+.signup-button:hover {
+    background: #031d44;
+}
+
+
+/* ================= HERO ================= */
+
+.listing-hero {
+
+    min-height: 400px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    /*
+       IMPORTANT:
+       Jesus.png must be inside the images folder.
+    */
+
+    background-image: url("./images/Jesus.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+.background-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(3, 21, 47, 0.70);
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    padding: 40px 20px;
+}
+
+
+.hero-content p {
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+.hero-content h1 {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero-content span {
+
+    font-size: 16px;
+
+    color: #dce8f7;
+}
+
+
+/* ================= PROPERTY SECTION ================= */
+
+.property-section {
+
+    padding: 90px 7%;
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+
+.section-title p {
+
+    color: #062b63;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.section-title h2 {
+
+    font-size: 38px;
+
+    margin-bottom: 12px;
+}
+
+
+.section-title span {
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* ================= PROPERTY GRID ================= */
+
+.property-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+    max-width: 1300px;
+
+    margin: auto;
+}
+
+
+/* ================= PROPERTY CARD ================= */
+
+.property-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.10);
+
+    transition: 0.4s;
+
+    position: relative;
+}
+
+
+.property-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ================= IMAGE AREA ================= */
+
+.image-wrapper {
+
+    height: 280px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #111827;
+}
+
+
+/* ================= PURPLE ROTATING LIGHT ================= */
+
+.purple-light {
+
+    position: absolute;
+
+    width: 270px;
+
+    height: 270px;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+
+        transparent 0deg,
+
+        transparent 100deg,
+
+        #7b2cff 150deg,
+
+        #c56cff 200deg,
+
+        transparent 250deg,
+
+        transparent 360deg
+
+    );
+
+    animation: rotateLight 3s linear infinite;
+
+    filter: blur(2px);
+
+}
+
+
+@keyframes rotateLight {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+/* ================= GOLD FRAME ================= */
+
+.gold-frame {
+
+    width: 90%;
+
+    height: 88%;
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 6px;
+
+    background: linear-gradient(
+
+        135deg,
+
+        #8a5a00,
+
+        #ffd700,
+
+        #fff0a0,
+
+        #c69214,
+
+        #ffd700,
+
+        #8a5a00
+
+    );
+
+    border-radius: 8px;
+
+    box-shadow:
+
+        0 0 10px rgba(255, 215, 0, 0.5),
+
+        inset 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+
+.gold-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 4px;
+}
+
+
+/* ================= PROPERTY INFORMATION ================= */
+
+.property-content {
+
+    padding: 25px;
+}
+
+
+.price {
+
+    color: #062b63;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+
+.status {
+
+    display: inline-block;
+
+    background: #062b63;
+
+    color: white;
+
+    padding: 6px 10px;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+
+.status.rent {
+
+    background: #56328c;
+}
+
+
+.property-content h3 {
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+
+.location {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= SPECIFICATIONS ================= */
+
+.specifications {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #eee;
+
+    border-bottom: 1px solid #eee;
+
+    padding: 15px 0;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+
+.specifications div {
+
+    border-right: 1px solid #eee;
+}
+
+
+.specifications div:last-child {
+
+    border-right: none;
+}
+
+
+.specifications strong {
+
+    display: block;
+
+    color: #062b63;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+
+.specifications span {
+
+    display: block;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* ================= VIEW BUTTON ================= */
+
+.view-property {
+
+    display: block;
+
+    text-align: center;
+
+    background: #062b63;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.view-property:hover {
+
+    background: #031d44;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    background: #03152f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 20px 30px;
+}
+
+
+footer h2 {
+
+    color: #8fc5ff;
+
+    margin-bottom: 10px;
+}
+
+
+footer > p {
+
+    color: #aab8ca;
+
+    font-size: 14px;
+}
+
+
+.footer-links {
+
+    margin: 30px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+.footer-links a {
+
+    color: #dce8f7;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.footer-links a:hover {
+
+    color: white;
+}
+
+
+/* ================= ANIMATED ELOHIM ================= */
+
+.animated-brand {
+
+    color: #062b63;
+
+    background: white;
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 6px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin: 15px 0 30px;
+
+    animation: appearDisappear 2.5s infinite;
+}
+
+
+@keyframes appearDisappear {
+
+    0% {
+
+        opacity: 0;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+    }
+
+}
+
+
+.copyright {
+
+    margin-top: 10px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 950px) {
+
+    .navbar {
+
+        padding: 15px 4%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    nav {
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .property-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 40px;
+
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .property-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .listing-hero {
+
+        min-height: 350px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .footer-links {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+}

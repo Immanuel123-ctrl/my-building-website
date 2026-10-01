@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #f7f8fa;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 75px;
+    width: 100%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo a {
+    color: #062b63;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #062b63;
+}
+
+.signup-button {
+    background: #062b63;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px 22px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.signup-button:hover {
+    background: #031d44;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+
+    background-image: url("images/Jesus.png");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 20, 50, 0.60);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 40px 20px;
+
+    color: white;
+}
+
+.welcome-text {
+    font-size: 14px;
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #8fc5ff;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    margin: 35px auto 0;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 10px;
+
+    max-width: 700px;
+
+    display: flex;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.search-box input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    padding: 16px;
+
+    font-size: 15px;
+}
+
+.search-box button {
+    border: none;
+
+    background: #062b63;
+    color: white;
+
+    padding: 0 30px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #031d44;
+}
+
+#searchMessage {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.featured,
+.testimonials {
+    padding: 90px 7%;
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+.small-title {
+    color: #062b63;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #777;
+    line-height: 1.6;
+}
+
+
+/* ================= PROPERTY CARDS ================= */
+
+.property-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.property-card {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.property-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.property-image {
+    height: 230px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*
+   You can replace these URLs later with
+   your own house images.
+*/
+
+.house-one {
+    background-image: url("images/house-1.jpg");
+}
+
+.house-two {
+    background-image: url("images/house-2.jpg");
+}
+
+.house-three {
+    background-image: url("images/house-3.jpg");
+}
+
+.property-info {
+    padding: 25px;
+}
+
+.property-type {
+    color: #062b63;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.property-info h3 {
+    margin: 10px 0;
+
+    font-size: 21px;
+}
+
+.location {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+.property-details {
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #eee;
+
+    border-bottom: 1px solid #eee;
+
+    padding: 14px 0;
+
+    font-size: 12px;
+
+    color: #555;
+}
+
+.property-info h4 {
+    font-size: 20px;
+
+    color: #062b63;
+
+    margin: 20px 0;
+}
+
+.view-button {
+    display: block;
+
+    text-align: center;
+
+    background: #062b63;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.view-button:hover {
+    background: #031d44;
+}
+
+.all-properties {
+    display: block;
+
+    width: fit-content;
+
+    margin: 45px auto 0;
+
+    color: #062b63;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials {
+    background: #eef3f9;
+}
+
+.testimonial-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.testimonial {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.customer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.customer-avatar {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: #062b63;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.customer h3 {
+    font-size: 16px;
+}
+
+.customer p {
+    color: #888;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+.stars {
+    color: #e6a700;
+
+    margin-bottom: 15px;
+}
+
+.testimonial > p:last-child {
+    color: #666;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* ================= CTA ================= */
+
+.cta {
+    padding: 90px 20px;
+
+    background: #062b63;
+
+    color: white;
+
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 30px;
+
+    color: #dce8f7;
+}
+
+.cta a {
+    display: inline-block;
+
+    background: white;
+
+    color: #062b63;
+
+    padding: 14px 30px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #03152f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 20px 30px;
+}
+
+footer h2 {
+    color: #8fc5ff;
+
+    margin-bottom: 10px;
+}
+
+footer > p {
+    color: #aab8ca;
+
+    font-size: 14px;
+}
+
+.footer-links {
+    margin: 30px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #dce8f7;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* ================= ANIMATED ELOHIM PRODUCTS ================= */
+
+.animated-brand {
+    color: #062b63;
+
+    background: white;
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 6px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin: 15px 0 30px;
+
+    animation: appearDisappear 2.5s infinite;
+}
+
+@keyframes appearDisappear {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+.copyright {
+    margin-top: 10px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 4%;
+
+        height: auto;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .property-container,
+    .testimonial-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .property-container,
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .search-box {
+        flex-direction: column;
+
+        gap: 8px;
+
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .search-box input {
+        border-radius: 7px;
+    }
+
+    .search-box button {
+        padding: 14px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}

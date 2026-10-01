@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | BuildNest</title>
+
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <div class="signup-container">
+
+        <div class="signup-box">
+
+            <div class="logo">
+                <h1>BuildNest</h1>
+                <p>Find a place you can call home.</p>
+            </div>
+
+            <h2>Create Your Account</h2>
+            <p class="subtitle">Sign up to explore beautiful properties.</p>
+
+            <form id="signupForm">
+
+                <!-- Full Name -->
+                <div class="input-group">
+                    <label for="fullname">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <!-- Email -->
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <!-- Password -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create an 8-character password"
+                        maxlength="8"
+                        minlength="8"
+                        required
+                    >
+
+                    <small>Password must be exactly 8 characters.</small>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Confirm your password"
+                        maxlength="8"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <!-- Terms -->
+                <div class="terms">
+                    <input type="checkbox" id="terms" required>
+
+                    <label for="terms">
+                        I agree to the Terms and Conditions
+                    </label>
+                </div>
+
+                <!-- Error / Success Message -->
+                <p id="message"></p>
+
+                <!-- Signup Button -->
+                <button type="submit" id="signupButton">
+                    Create Account
+                </button>
+
+            </form>
+
+            <p class="login-text">
+                Already have an account?
+                <a href="homepage.html">Go to Homepage</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="signup.js"></script>
+
+</body>
+</html>

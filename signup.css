@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.signup-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    color: #1d3557;
+    margin-bottom: 8px;
+}
+
+.logo p {
+    color: #777;
+    font-size: 14px;
+}
+
+.signup-box h2 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #1d3557;
+
+    box-shadow: 0 0 0 2px rgba(29, 53, 87, 0.1);
+}
+
+.input-group small {
+    display: block;
+    margin-top: 5px;
+
+    color: #888;
+    font-size: 12px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+}
+
+.terms input {
+    cursor: pointer;
+}
+
+.terms label {
+    color: #555;
+}
+
+#message {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    min-height: 18px;
+}
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #1d3557;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #14253d;
+}
+
+.login-text {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #777;
+    font-size: 14px;
+}
+
+.login-text a {
+    color: #1d3557;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .signup-box {
+        padding: 25px;
+    }
+
+    .logo h1 {
+        font-size: 27px;
+    }
+}
